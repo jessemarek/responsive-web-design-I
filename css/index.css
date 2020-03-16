@@ -338,6 +338,23 @@ section.container {
     .header-image {
         display: none;
     }
+
+    .about-header-img {
+        margin: 10vh 0 0;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+    }
+
+    #about-details {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #about-details div {
+        width: 90%;
+    }
 }
 
 @media (max-width: 500px){
@@ -396,4 +413,18 @@ section.container {
         width: 85%;
         margin: 0 auto;
     }
+
+    header.services-header {
+        padding: 0;
+    }
+
+    .about-header-img {
+        width: 85%;
+        margin: 2vh auto 0;
+    }
+
+    .about-info-img {
+        width: 75%;
+    }
+
 }

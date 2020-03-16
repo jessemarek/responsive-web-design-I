@@ -347,6 +347,25 @@ section.container {
         font-size: 1.2rem;
     }
 
+    .services-header-img {
+        margin: 10vh 0 0;
+    }
+
+    #service-facts {
+        padding: 0;
+        width: 100%;
+    }
+
+    .bottom-content .service-item ul {
+        position: initial;
+        line-height: 1.5;
+    }
+
+    .bottom-content .services-info-img {
+        width: 100%;
+        margin: 0 0 0 75%;
+    }
+
     #about-details {
         flex-direction: column-reverse;
         align-items: center;
@@ -416,6 +435,22 @@ section.container {
 
     header.services-header {
         padding: 0;
+    }
+
+    .services-header-img {
+        width: 85%;
+        margin: 1vh auto 0;
+    }
+    .top-content.container {
+        justify-content: center;
+    }
+
+    .top-content.container div.service-item {
+        width:100%;
+    }
+
+    .bottom-content .service-item ul {
+        margin: 0 8%;
     }
 
     .about-header-img {

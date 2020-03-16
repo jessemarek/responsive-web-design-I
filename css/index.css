@@ -153,7 +153,6 @@ header .container div{
 header {
 	display: flex;
 	padding: 10% 0;
-	border-bottom: 3px solid black;
 }
 
 header.services-header {
@@ -205,12 +204,16 @@ header.services-header {
 }
 
 /*Content Styles */
-.top-content .container div{
-	width: 40%;
-	padding: 3%;
+.top-content {
+    border-top: 3px solid black;
 }
 
-.middle-img, .services-header-img {
+.top-content .container div{
+	width: 40%;
+    padding: 3%;
+}
+
+.middle-img img, .services-header-img {
 	width: 100%;
 	box-shadow: 5px 5px 8px #323232;
 }
@@ -329,7 +332,7 @@ section.container {
     }
 
     header .container {
-        padding: 10% 0 0;
+        padding: 10vh 0 0;
     }
 
     .header-image {
@@ -338,5 +341,59 @@ section.container {
 }
 
 @media (max-width: 500px){
+    body {
+        padding: 0;
+    }
 
+    section {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 0;
+        position: initial;
+    }
+
+    nav .links {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .links a {
+        width: 100%;
+        border-bottom: 2px solid #fff;
+    }
+
+    #animated_div {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    header .container div, .top-content .container div, 
+    .bottom-content .container div {
+        width: 100%;
+    }
+
+    header .container {
+        margin: 0 auto;
+        padding: 0 0 10%;
+
+    }
+
+    .middle-img {
+        width: 85%;
+        margin: 0 auto;
+    }
 }

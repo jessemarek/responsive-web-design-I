@@ -1,3 +1,465 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+body{
+	padding: 0 5% 10%;
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+#animated_div{
+	width: 40px;
+	height: 40px;
+	background: #990078;
+	position: absolute;
+	top: 110%;
+	left: 1%;
+	text-align: center;
+	font-size: 20px;
+	border-radius: 7px;
+	padding: 0.5rem 0;
+	animation: animated_div 5s 2s 1;
+}
+
+@keyframes animated_div {
+    0% { transform: rotate(0deg); left: 10px; }
+    25% { transform: rotate(20deg); left: 10px; }
+    50% { transform: rotate(0deg); left: 95%; }
+    55% { transform: rotate(0deg); left: 95%; }
+    70% { transform: rotate(0deg); left: 95%; background: #0080db; }
+    100% { transform: rotate(-360deg); left: 0px; }
+}
+
+/* Navigation Styles */
+nav {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-image: linear-gradient(to right, #990078, #dd8f00, #67d305, #0080db);
+	box-shadow: 10px 0 20px #fff;
+	width: 100%;
+	padding-left: 8%;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+.links a{
+	color: #fff;
+	text-decoration: none;
+	width: 10%;
+	padding: 2% 0;
+	text-align: center;
+}
+
+.links a:hover {
+	background: #000;
+}
+
+.logo {
+	position: relative;
+	top: 10px;
+	margin: 0 0 0 12%;
+}
+
+/* Header Styles */
+header .container {
+	justify-content: center;
+	align-items: center;
+}
+
+header .container div{
+	width: 50%;
+	height: 50vh;
+}
+
+.header-image {
+	height: 70vh;
+}
+
+header {
+	display: flex;
+	padding: 10% 0;
+}
+
+header.services-header {
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 5% 0;
+
+}
+
+.header-content {
+	padding: 3%;
+	margin: 2% 0 0 0;
+}
+
+.header-content h2 {
+	font-size: 30px;
+}
+
+.header-content p {
+	font-size: 24px;
+}
+
+.page-title h1 {
+	font-size: 100px;
+	text-align: center;
+	line-height: 1;
+}
+
+.page-title button {
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+	padding: 2%;
+	border: 1px solid #000;
+	background: #fff;
+	color: #000;
+	text-align: center;
+	font-size: 12px;
+	outline-style: none;
+	box-shadow: 1px 1px 2px #323232;
+}
+
+.page-title button:hover, .service-item button:hover {
+	cursor: pointer;
+}
+
+.page-title button:active, .service-item button:active {
+	box-shadow: none;
+}
+
+/*Content Styles */
+.top-content {
+    border-top: 3px solid black;
+}
+
+.top-content .container div{
+	width: 40%;
+    padding: 3%;
+}
+
+.middle-img img, .services-header-img {
+	width: 100%;
+	box-shadow: 5px 5px 8px #323232;
+}
+
+.bottom-content {
+	border-bottom: 3px solid #000;
+}
+
+.bottom-content .container div {
+	width: 30%;
+	padding: 3%;
+}
+
+.contact {
+	margin-top: 5%;
+	display: flex;
+}
+
+footer {
+	text-align: center;
+	padding: 5%;
+}
+
+/* Services Page Styles */
+section.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.top-content.container {
+	border-bottom: 3px solid #000;
+}
+
+.bottom-content.container {
+	border: none;
+}
+
+.service-item {
+	background: #DCDCDC;
+	border: 1px solid #000;
+	width: 45%;
+	padding: 2%;
+	margin: 2%;
+}
+
+.service-item h3 {
+	font-size: 24px;
+}
+
+.service-item p {
+	font-size: 18px;
+}
+
+.service-item button {
+	display: block;
+	font-size: 14px;
+	padding: 2% 10%;
+	margin: 5% 0 0 0;
+	border: 1px solid #000;
+	outline-style: none;
+	box-shadow: 1px 1px 2px #323232;
+}
+
+.bottom-content .service-item {
+	border: none;
+	background: none;
+	padding: 0;
+}
+
+.bottom-content .service-item ul {
+	list-style: unset;
+	line-height: 2;
+	position: absolute;
+	left: 8%;
+}
+
+.bottom-content .services-info-img {
+	width: 100%;
+	box-shadow: 5px 5px 8px #323232;
+}
+
+#service-facts {
+	padding: 0 8% 0 0;
+}
+
+/* About Page Styles */
+.about-header-img {
+	width: 100%;
+	box-shadow: 5px 5px 8px #323232;
+}
+
+.about-info-img {
+	border-radius: 50%;
+	margin: 5% 5% 5% 15%;
+	box-shadow: 5px 5px 8px #323232;
+}
+
+#about-details {
+	line-height: 2;
+}
+
+@media (max-width: 800px){
+    nav {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .links {
+        width: 90%;
+    }
+
+    header .container {
+        padding: 10vh 0 0;
+    }
+
+    .header-image {
+        display: none;
+    }
+
+    .about-header-img {
+        margin: 10vh 0 0;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+    }
+
+    .services-header-img {
+        margin: 10vh 0 0;
+    }
+
+    #service-facts {
+        padding: 0;
+        width: 100%;
+    }
+
+    .bottom-content .service-item ul {
+        position: initial;
+        line-height: 1.5;
+    }
+
+    .bottom-content .services-info-img {
+        width: 100%;
+        margin: 0 0 0 75%;
+    }
+
+    #about-details {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #about-details div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px){
+    body {
+        padding: 0;
+    }
+
+    section {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 0;
+        position: initial;
+    }
+
+    nav .links {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .links a {
+        width: 100%;
+        border-bottom: 2px solid #fff;
+    }
+
+    #animated_div {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    header .container div, .top-content .container div, 
+    .bottom-content .container div {
+        width: 100%;
+    }
+
+    header .container {
+        margin: 0 auto;
+        padding: 0 0 10%;
+
+    }
+
+    .middle-img {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    header.services-header {
+        padding: 0;
+    }
+
+    .services-header-img {
+        width: 85%;
+        margin: 1vh auto 0;
+    }
+    .top-content.container {
+        justify-content: center;
+    }
+
+    .top-content.container div.service-item {
+        width:100%;
+    }
+
+    .bottom-content .service-item ul {
+        margin: 0 8%;
+    }
+
+    .about-header-img {
+        width: 85%;
+        margin: 2vh auto 0;
+    }
+
+    .about-info-img {
+        width: 75%;
+    }
+
+}
